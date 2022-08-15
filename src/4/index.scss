@@ -1,4 +1,61 @@
 /* DO NOT CHANGE THIS ROOT CLASS NAME*/
+$brandColor: #86b111;
+$brandColorDark: darken($brandColor, 3%);
+$grey: #555;
+$white: #ffffff;
+$headingColor: #404040;
+
+$spacing-1: 1rem;
+
 #task-5 {
-  /* Styles goes here */
+  .form {
+    width: 50%;
+    margin: $spacing-1 auto;
+    &-heading {
+      font-size: 1.2rem;
+      color: $headingColor;
+      margin: 0 0 $spacing-1 0; 
+    }
+    &-group {
+      margin-bottom: $spacing-1;
+    }
+    &__label,
+    &__input,
+    &__button {
+      display: block;
+      width: 100%;
+    }
+    &__label {
+      font-size: .85rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: $grey;
+    }
+    &__input {
+      border: 1px solid #ccc;
+      border-radius: .2rem;
+      padding: .65rem .5rem;
+      color: $grey;
+      &:focus {
+        outline-color: $brandColor;
+      }
+      &:hover {
+        border-color: $brandColor;
+      }
+    }
+    &__button {
+      padding: .65rem .5rem;
+      border-radius: .2rem;
+      text-transform: uppercase;
+      background-color: $brandColor;
+      border-color: 0;
+      border: 1px solid $brandColor;
+      color: $white;
+      cursor: pointer;
+      &:hover {
+        background-color: $brandColorDark;
+        border-color: $brandColorDark;
+      }
+    }
+  }
 }
