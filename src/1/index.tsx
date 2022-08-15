@@ -1,7 +1,7 @@
 import { FunctionComponent, useState } from "react";
 
 const Task1: FunctionComponent = () => {
-  const [items, setItems] = useState([
+  const [items] = useState([
     "Item 1",
     "Item 2",
     "Item 3",
@@ -9,7 +9,13 @@ const Task1: FunctionComponent = () => {
     "Item 5",
   ]);
 
-  return <div>#List goes here#</div>;
+  return (
+    <div>
+      <ul>
+        {items.map((item, i) => <li key={i}>{item}</li>)}
+      </ul>
+    </div>
+  );
 };
 
 export default Task1;
