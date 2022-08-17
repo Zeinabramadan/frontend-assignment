@@ -1,4 +1,87 @@
 /* DO NOT CHANGE THIS ROOT CLASS NAME*/
+$brandColor: #86b111;
+$brandColorDark: darken($brandColor, 3%);
+$grey: #555;
+$white: #ffffff;
+$headingColor: #404040;
+$lightGrey: #f9f9f9;
+$errorColor: #ef245d;
+$errorColorDark: darken($errorColor, 5%);
+$spacing-1: 1rem;
+
 #task-6 {
   /* Styles goes here */
+  .form {
+    &__input {
+      border: 1px solid #ccc;
+      border-radius: .2rem;
+      padding: .65rem .5rem;
+      color: $grey;
+      width: 300px;
+      margin-bottom: 20px;
+
+      &:focus {
+        outline-color: $brandColor;
+      }
+
+      &:hover {
+        border-color: $brandColor;
+      }
+    }
+  }
+
+  .strike {
+    text-decoration: line-through;
+  }
+
+  .todos {
+    display: flex;
+    gap: $spacing-1;
+    &-container {
+      width: 50%;
+    }
+    &-item {
+      display: flex;
+      background: $lightGrey;
+      border-radius: 3px;
+      padding: $spacing-1;
+      line-height: inherit;
+      margin-bottom: $spacing-1;
+      &:hover {
+        background: #f5f5f5;
+      }
+      .delete {
+        margin-left: auto;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &-title {
+      font-size: .85rem;
+      margin: .7rem 0;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  .delete {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    line-height: 15px;
+    background-color: $errorColor;
+    color: $white;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: $errorColorDark;
+    }
+  }
+
+  .search {
+    display: flex;
+    justify-content: space-between;
+  }
 }
